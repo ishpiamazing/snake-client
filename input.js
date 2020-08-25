@@ -17,6 +17,8 @@ const setupInput = function(conn) {
     if(key === 'a') {conn.write('Move: left')}
     if(key === 's') {conn.write('Move: down')}
     if(key === 'd') {conn.write('Move: right')}
+    if(key === 'i') {conn.write('Say: hi')}
+    if(key === 'g') {conn.write('Say: good')}
   };
 
 
