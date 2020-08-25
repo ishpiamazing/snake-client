@@ -1,4 +1,5 @@
 const net = require('net');
+const setupInput = require('./input');
 
 /**
  * Establishes connection with the game server
@@ -14,15 +15,6 @@ const connect = function() {
   conn.write("Name: ISH");
 });
 
-/* timers to move our cursor in different directions*/
-// conn.on('connect', () => {
-  
-//   // setTimeout(() => conn.write("Move: up"),1000);
-//   // setTimeout(() => conn.write("Move: left"),3000);
-//   // setTimeout(() => conn.write("Move: up"),5000);
-//   // setTimeout(() => conn.write("Move: right"),7000);
-//   // setInterval(() => conn.write("Move: left"),500)
-// })
 
   // interpret incoming data as text
   conn.setEncoding('utf8'); 
@@ -33,20 +25,7 @@ const connect = function() {
   return conn;
 }
 
-const setupInput = function() {
-  const stdin = process.stdin;
-  stdin.setRawMode(true);
-  stdin.setEncoding('utf8');
-  stdin.resume();
 
-  const handleUserInput = function(key) {
-    if(key === '\u0003') {
-      process.exit();
-    }
-  };
-  stdin.on('data', handleUserInput);
-  return stdin;
-}
 
 setupInput();
 
