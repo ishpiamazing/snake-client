@@ -14,6 +14,16 @@ const connect = function() {
   conn.write("Name: ISH");
 });
 
+/* timers to move our cursor in different directions*/
+// conn.on('connect', () => {
+  
+//   // setTimeout(() => conn.write("Move: up"),1000);
+//   // setTimeout(() => conn.write("Move: left"),3000);
+//   // setTimeout(() => conn.write("Move: up"),5000);
+//   // setTimeout(() => conn.write("Move: right"),7000);
+//   // setInterval(() => conn.write("Move: left"),500)
+// })
+
 
 
 
